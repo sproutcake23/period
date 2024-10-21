@@ -1,13 +1,18 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 
-formatted_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+current_day = datetime.now().strftime("%A")
 
-data_cai_a = {"Monday":["MFC","CP","C", "FIH", "TC", "[LAB] CP"],
-              "Tuesday": ["DM", "MFC", "MAOM","MAOM", "YOGA", "[LAB] TC" ,],
-              "Wednesday":["CP", "MFC", "ECS", "C", "TC", "[LAB] ECS"],
-              "Thursday":["C", "DM", "ECS", "MAOM", "COUNS.", "[LAB] DM"],
-              "Friday":["FIH", "C", "[LAB] C", "[LAB] C", "LIBRARY", "[LAB] MFC"] }
-# for key, value in data_cai_a.items():
-#     print(data_cai_a[key][5], "weights: ", "8" )
+data_cai_a = {
+    "Monday": ["MFC", "CP", "C", "FIH", "TC", "[LAB] CP"],
+    "Tuesday": ["DM", "MFC", "MAOM", "MAOM", "YOGA", "[LAB] TC"],
+    "Wednesday": ["CP", "MFC", "ECS", "C", "TC", "[LAB] ECS"],
+    "Thursday": ["C", "DM", "ECS", "MAOM", "COUNS.", "[LAB] DM"],
+    "Friday": ["FIH", "C", "[LAB] C", "[LAB] C", "LIBRARY", "[LAB] MFC"],
+}
 
-print(formatted_date)
+today = datetime.now()
+next_day_date = today + timedelta(days=1)
+next_day = next_day_date.strftime("%A")
+
+print("Current Day:", current_day)
+print("Next Day:", next_day)
