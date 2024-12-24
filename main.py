@@ -21,9 +21,10 @@ print("Current Day:", current_day)
 print("Next Day:", next_day)
 
 notDone = True 
-
+print('''Enter the subjects you need to work on 
+and press q to go to the next step :''')
 while notDone:
-    sub_input = input("Enter the subjects you need to work on :")
+    sub_input = input("")
 
     if sub_input.lower() == "q":
         notDone =False
@@ -41,6 +42,4 @@ while notDone:
      
 
 print(f"Prioritise these subjects {prio}")           
-print(f"Do not prioritise these subjects {not_prio}")           
-         
-    
+print(f"Do these subjects later{not_prio}")
